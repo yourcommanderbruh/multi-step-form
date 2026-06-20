@@ -1,0 +1,364 @@
+.form-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 580px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-header h1 {
+  font-size: 26px;
+  color: #1a376c;
+  margin-bottom: 6px;
+}
+
+.form-header p {
+  color: #888;
+  font-size: 14px;
+}
+
+/* ── Progress Bar ── */
+.progress-container {
+  margin-bottom: 30px;
+}
+
+.steps-indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.step-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.step-circle.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+}
+
+.step-circle.completed {
+  background: #28a745;
+  color: white;
+}
+
+.step-label {
+  font-size: 11px;
+  color: #999;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.step-label.active-label {
+  color: #667eea;
+  font-weight: bold;
+}
+
+.step-line {
+  position: absolute;
+  top: 18px;
+  left: 60%;
+  width: 80%;
+  height: 2px;
+  background: #e0e0e0;
+  z-index: 0;
+}
+
+.step-line.completed-line {
+  background: #28a745;
+}
+
+.progress-bar-bg {
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+/* ── Step Content ── */
+.step-content {
+  margin-bottom: 20px;
+}
+
+.step-title {
+  font-size: 22px;
+  color: #1a376c;
+  margin-bottom: 6px;
+}
+
+.step-subtitle {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* ── Form Groups ── */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #333;
+  transition: border 0.3s ease;
+  outline: none;
+  background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #667eea;
+  background: white;
+}
+
+.input-error {
+  border-color: #e74c3c !important;
+  background: #fff5f5 !important;
+}
+
+.error-msg {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  padding-right: 45px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.checkbox-label {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+
+.checkbox-label input {
+  width: auto !important;
+  cursor: pointer;
+}
+
+/* ── Navigation Buttons ── */
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.btn-next {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-next:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-prev {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-prev:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* ── Summary ── */
+.summary-section {
+  background: #f8f9ff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-left: 4px solid #667eea;
+}
+
+.summary-section h3 {
+  font-size: 15px;
+  color: #1a376c;
+  margin-bottom: 14px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.summary-label {
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-value {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+.summary-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-edit {
+  flex: 1;
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-edit:hover {
+  background: #667eea;
+  color: white;
+}
+
+.btn-submit {
+  flex: 2;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+/* ── Success Screen ── */
+.success-screen {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.success-icon {
+  font-size: 72px;
+  margin-bottom: 20px;
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0% { transform: scale(0); }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.success-screen h2 {
+  font-size: 26px;
+  color: #1a376c;
+  margin-bottom: 10px;
+}
+
+.success-screen p {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.success-screen .btn-next {
+  margin-top: 24px;
+  margin-left: 0;
+}
